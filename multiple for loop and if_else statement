@@ -1,0 +1,16 @@
+w=['p',[['b']],['a'],[[[['f','h']]]],'q','r','s']
+
+flatten_list = lambda q:[element for item in q for element in flatten_list(item)] if type(q) is list else [q]
+print(list(flatten_list(w)))
+
+##for item in list:
+        # if type(list) is list:
+            for el in flatten_list(item):
+         # meaning the
+ previous for-loop is used recursively until they reach element of the nested inner lists
+         if type(q) is list:
+            print(element)
+         else:
+            print(element)
+         
+ 
