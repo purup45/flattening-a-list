@@ -18,8 +18,13 @@ lst1 = [1, {3}, (1, 6), [[3, 8]], [[[5]]], 9, ((((2,),),),)]
 lst2 = ['3', 'A', [[[(i ** 2 for i in range(3))]]], range(3)]
 
 flatten_list = lambda q:[element for item in q for element in flatten_list(item)] if type(q) is not str and type(q) is not int else [q]
+or same
+flatten_list = lambda q:[element for item in q for element in flatten_list(item)] if not isinstance(q,(int,str)) else [q]
+
+
+              
 print((flatten_list(lst1)))
 print(flatten_list(lst2))
 
-or
+or(need to optimize,not working properly)
 flatten=lambda l: sum(map(flatten,l),[]) if isinstance(l,list) else [l]
